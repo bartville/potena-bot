@@ -4,11 +4,13 @@
   "description": "Telegram PotenaBot",
   "main": "index.js",
   "dependencies": {
+    "asyncawait": "^1.0.7",
     "botgram": "^2.0.1",
-    "figlet": "^1.2.0"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-polyfill": "^6.20.0",
     "eslint": "^4.18.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-google": "^0.9.1",
