@@ -13,9 +13,13 @@ function onMessage(msg, reply) {
 	to_reply = msg.text
 	if (msg.text.indexOf('pollo') > -1) {
 		to_reply = 'Forse vulevi dire Pllashtr!'
-	}
-    	reply.text(to_reply).then();
-    	return;   
+    reply.text(to_reply).then();
+    return;   
+  } else if (msg.text.indexOf('tarallo') > -1) {
+		to_reply = 'Vscuotter!'
+    reply.text(to_reply).then();
+    return;       
+  }
 }
 
 bot.text(onMessage);
