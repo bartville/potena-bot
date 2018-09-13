@@ -10,8 +10,12 @@ if (!token) {
 const bot = new Botgram(token);
 
 function onMessage(msg, reply) {
-    reply.text(msg.text).then();
-    return;   
+	to_reply = msg.text
+	if (msg.text.indexOf('pollo') > -1) {
+		to_reply = 'Forse vulevi dire Pllashtr!'
+	}
+    	reply.text(to_reply).then();
+    	return;   
 }
 
 bot.text(onMessage);
