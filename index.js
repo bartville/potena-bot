@@ -9,13 +9,13 @@ if (!token) {
 
 const bot = new Botgram(token);
 
-bot.command("help", function (msg, reply, next) {
-    reply.markdown("Aee!");
-});
-
-// function onMessage(msg, reply) {
-//     reply.text(msg.text).then();
-//     return;   
-// }
+function onMessage(msg, reply) {
+	to_reply = msg.text
+	if (msg.text.indexOf('pollo') > -1) {
+		to_reply = 'Forse vulevi dire Pllashtr!'
+	}
+    	reply.text(to_reply).then();
+    	return;   
+}
 
 bot.text(onMessage);
