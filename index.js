@@ -9,9 +9,13 @@ if (!token) {
 
 const bot = new Botgram(token);
 
-function onMessage(msg, reply) {
-    reply.text(msg.text).then();
-    return;   
-}
+bot.command("help", function (msg, reply, next) {
+    reply.markdown("Aee!");
+});
+
+// function onMessage(msg, reply) {
+//     reply.text(msg.text).then();
+//     return;   
+// }
 
 bot.text(onMessage);
