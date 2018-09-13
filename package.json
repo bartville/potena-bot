@@ -4,7 +4,7 @@
   "description": "Telegram PotenaBot",
   "main": "index.js",
   "dependencies": {
-    "botgram": "^2.0.1",
+    "botgram": "^2.2.0",
     "figlet": "^1.2.0"
   },
   "devDependencies": {
