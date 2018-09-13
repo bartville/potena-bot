@@ -12,7 +12,7 @@ const bot = new Botgram(token);
 function onMessage(msg, reply) {
 	to_reply = msg.text
 	if (msg.text.indexOf('pollo') > -1) {
-		to_reply = 'Forse vulevi dire Pllashtr!'
+		to_reply = 'Forse vuliv di Pllashtr!'
     reply.text(to_reply).then();
     return;   
   } else if (msg.text.indexOf('tarallo') > -1) {
