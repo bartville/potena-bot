@@ -1,8 +1,4 @@
-/* Selection of Curses */
-var curses_list = [" mamta fa l spaccat ngopp i tutr",
-                  " ti svito la testa e ci cago dentro"];
-
-
+var lists = require('./misc_lists.js');
 
 // PotenaBot is triggered by specific words, as Pollo/Tarallo/Alberto
 exports.onMessage = function(msg, reply){
@@ -44,8 +40,8 @@ exports.onMessage = function(msg, reply){
     var id_insulta = msg_splitted.indexOf('insulta')
     if(id_insulta == -1)
       id_insulta = msg_splitted.indexOf('Insulta');
-    var x = Math.floor((Math.random() * curses_list.length));
-    to_reply = msg_splitted[id_insulta+1] + curses_list[x];
+    var x = Math.floor((Math.random() * lists.curses.length));
+    to_reply = msg_splitted[id_insulta+1] + lists.curses[x];
     reply.text(to_reply).then();
     return;
   }
