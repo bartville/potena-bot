@@ -21,12 +21,16 @@ commands.declare(potena_bot, "mamma");
 commands.declare(potena_bot, "zambardi");
 // depicts a random photo from photo_list
 commands.declare(potena_bot, "foto");
+// depicts a start message
+commands.declare(potena_bot, "start");
 // depicts a random photo from ficadelgiorno_list
 commands.declare(potena_bot, "ficadelgiorno");
 // you don't want to know it
-commands.declare(potena_bot, "dominique");
+// commands.declare(potena_bot, "dominique");
 // Generate a Random Molisan Sentence
 commands.declare(potena_bot, "random");
+// Generate a Random Padulo
+commands.declare(potena_bot, "padulo");
 // returns the deadline time (in seconds) for required conference: e.g. /deadline ICRA
 commands.declare(potena_bot, "deadline");
 

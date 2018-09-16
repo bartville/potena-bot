@@ -3,12 +3,13 @@ const bg = require('botgram');
 var venafrano = require('./molisan-vocabulary.js');     // load the vocabulary for random sentence generation
 var utils = require('./utils.js');                      // load base utilities to address lists
 var lists = require('./misc_lists.js');                 // load lists of photo/names/curses/stuff
+var paduli = require('./padulo.js');                    // load padulo-generator utilities
 
-
+// Declare new bot commands, i.e. the one triggered by '/'
 exports.declare = function(potena_bot, string) {
   potena_bot.command(string, function (msg, reply, next) {
     if(string == "help") {
-      reply.markdown("**Aee! T l sev ritt** \n\t `/help` : issi vi. \n\t `/foto` : e c la ve. \n\t `/ficadelgiorno` : a pressione. \n\t `/frasedelgiorno` : aee. \n\t `/mamma` : ngul a mammt. \n\t `/zambardi` : sex symbol. \n\t `/random` : gli vi.");
+      reply.markdown("**Aee! T l sev ritt** \n\t `/help` : issi vi. \n\t `/foto` : e c la ve. \n\t `/ficadelgiorno` : a pressione. \n\t `/frasedelgiorno` : aee. \n\t `/mamma` : ngul a mammt. \n\t `/zambardi` : sex symbol. \n\t `/random` : gli vi. \n\t `/padulo` : nagg i cuaz.");
     }
     else if(string == "mamma") {
        reply.markdown("Ngul a mammt!"); 
@@ -19,14 +20,21 @@ exports.declare = function(potena_bot, string) {
     else if(string == "foto"){
       reply.photo(utils.randomElementFromList(lists.photo));
     }
+    else if(string == "start"){
+      reply.text("cazz vuo', Puorc?");
+    }
     else if(string == "ficadelgiorno"){
       reply.photo(utils.randomElementFromList(lists.ficadelgiorno));
     }
-    else if(string == "dominique"){
-      reply.photo("http://danielevangelista.altervista.org/PotenaBotMedia/Photos/dominik.jpg");
+/*    else if(string == "dominique"){
+      reply.photo("http://danielevangelista.altervista.org/PotenaBotMedia/Photos/dominik.jpg", '"eho, hai rotto il cazz!"');
     }
+*/
     else if(string == "random"){
       reply.markdown(venafrano.generateMolisan());
+    }
+    else if(string == "padulo"){
+      reply.photo(lists.nardi, paduli.generatePadulo());
     }
     else if(string == "deadline"){
       var msg_splitted = msg.text.split(" ");

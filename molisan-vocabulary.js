@@ -1,15 +1,15 @@
 var utils = require("./utils.js");
+var people = require("./persone.js");
 
 /***** LIST OF WORDS FOR MOLISAN VOCABULARY*****/
 exports.bonus =        ["aee", "e le vi", "e gli vi" ,"essi vi", "e c la ve", "sant Ncandr", "neggia i cuazz"];
-exports.subjects =     ["nardi", "albrdo", "dominik", "lucazz", "telespalla", "roland", "giorgio", "barto'lo", "dodo"];
 exports.verbs =        ["spetacc", "ha squacciato", "squacc", "trzzea", "ha spresato", "ha cagato"];
 exports.prepositions = ["", "ngopp", "sott", "vicin"];
 exports.objects =      ["l vscuott", "le vscuottera", "la frssor", "u pullashtr", "le spiarn"];
 
 // generates a molisan sentence as: subject + verb + preposition + object
 exports.generateMolisan = function() {
-    var subject = utils.randomElementFromList(this.subjects);
+    var subject = utils.randomElementFromList(people.subjects);
     var verb = utils.randomElementFromList(this.verbs);
     var preposition = "";
     if(Math.random() > 0.5)
