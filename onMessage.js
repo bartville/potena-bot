@@ -46,10 +46,11 @@ exports.onMessage = function(msg, reply){
 */
     } else if (msg.text.indexOf('insulta') > -1 || msg.text.indexOf('Insulta') > -1) { 
     var msg_splitted = msg.text.split(" ");
-    var id_insulta = msg_splitted.indexOf('insulta')
+    var id_insulta = msg_splitted.indexOf('insulta');
     if(id_insulta == -1)
       id_insulta = msg_splitted.indexOf('Insulta');
-    to_reply = msg_splitted[id_insulta+1] + utils.randomElementFromList(lists.curses);
+    var re_splitted = msg.text.split(msg_splitted[id_insulta]);
+    to_reply = re_splitted[1] + utils.randomElementFromList(lists.curses);
     reply.text(to_reply).then();
     return;
   }
