@@ -9,7 +9,7 @@ var paduli = require('./padulo.js');                    // load padulo-generator
 exports.declare = function(potena_bot, string) {
   potena_bot.command(string, function (msg, reply, next) {
     if(string == "help") {
-      reply.markdown("**Aee! T l sev ritt** \n\t `/help` : issi vi. \n\t `/foto` : e c la ve. \n\t `/ficadelgiorno` : a pressione. \n\t `/frasedelgiorno` : aee. \n\t `/mamma` : ngul a mammt. \n\t `/zambardi` : sex symbol. \n\t `/random` : gli vi. \n\t `/padulo` : nagg i cuaz.");
+      reply.markdown("*Aee! T l sev ritt* \n\t `/help` : issi vi. \n\t `/foto` : e c la ve. \n\t `/ficadelgiorno` : a pressione. \n\t `/mamma` : ngul a mammt. \n\t `/zambardi` : sex symbol. \n\t `/random` : gli vi. \n\t `/padulo` : nagg i cuaz.");
     }
     else if(string == "mamma") {
        reply.markdown("Ngul a mammt!"); 

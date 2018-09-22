@@ -17,11 +17,11 @@ exports.onMessage = function(msg, reply){
     reply.text(to_reply).then();
     return;       
   } else if (msg.text.indexOf('taralli' ) > -1  || msg.text.indexOf('Taralli') > -1) {
-		to_reply = 'Vscuotter!'
+		to_reply = 'Vscuottera!'
     reply.text(to_reply).then();
     return;       
   } else if (msg.text.indexOf('lol' ) > -1  || msg.text.indexOf('Lol') > -1) {
-		to_reply = 'Cazz c rir, strunz!'
+		to_reply = utils.randomElementFromList(lists.lol);
     reply.text(to_reply).then();
     return;      
   } else if (msg.text.indexOf('sapere' ) > -1  || msg.text.indexOf('sai') > -1) {
@@ -30,6 +30,14 @@ exports.onMessage = function(msg, reply){
     return;        
   } else if (msg.text.indexOf('alberto') > -1 || msg.text.indexOf('Alberto') > -1) {
 		to_reply = 'Albrdo!'
+    reply.text(to_reply).then();
+    return;       
+  } else if (msg.text.indexOf('padulo') > -1 || msg.text.indexOf('Padulo') > -1) {
+		to_reply = "E che é successo, eh?"
+    reply.text(to_reply).then();
+    return;  
+  } else if (msg.text.indexOf('cibo') > -1 || msg.text.indexOf('Cibo') > -1) {
+		to_reply = 'Ecc e ch Puorc!'
     reply.text(to_reply).then();
     return;       
   } else if (msg.text.indexOf('ciro') > -1 || msg.text.indexOf('Ciro') > -1) {
@@ -46,11 +54,18 @@ exports.onMessage = function(msg, reply){
 */
     } else if (msg.text.indexOf('insulta') > -1 || msg.text.indexOf('Insulta') > -1) { 
     var msg_splitted = msg.text.split(" ");
-    var id_insulta = msg_splitted.indexOf('insulta')
+    var id_insulta = msg_splitted.indexOf('insulta');
     if(id_insulta == -1)
       id_insulta = msg_splitted.indexOf('Insulta');
-    to_reply = msg_splitted[id_insulta+1] + utils.randomElementFromList(lists.curses);
+    var re_splitted = msg.text.split(msg_splitted[id_insulta]);
+    to_reply = re_splitted[1] + utils.randomElementFromList(lists.curses);
     reply.text(to_reply).then();
+    return;
+  } else if (msg.text.indexOf('iocchi') > -1 || msg.text.indexOf('Iocchi') > -1) {
+    reply.document("http://danielevangelista.altervista.org/PotenaBotMedia/Photos/iocci.gif");
+    return;
+  } else if (msg.text.indexOf('deadline') > -1 || msg.text.indexOf('Deadline') > -1) {
+    reply.text("Futt a mov!").then();
     return;
   }
   
