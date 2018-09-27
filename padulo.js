@@ -18,12 +18,24 @@ exports.generatePadulo = function() {
   return utils.randomElementFromList(paduli);
 }
 
+exports.addAccompagnatore = function(sentence) {
+  var subject = people.nardi;
+  while(subject == people.nardi) { 
+    subject = utils.randomElementFromList(people.subjects);
+  }
+  var re_splitted = sentence.split('"');
+  var extended_sentence = '"' + re_splitted[1] + " ...e " + subject + ' verrà con me!"';
+  return extended_sentence;
+} 
+
 exports.basePadulo = function() {
   var time = utils.randomElementFromList(this.times);
   var subject = utils.randomElementFromList(people.subjects);
   var verb = utils.randomElementFromList(this.verbs);
   var duty = utils.randomElementFromList(this.duties);
   var sentence = '"' + time + ' ' + subject + ' ' + verb + ' ' + duty + '"';
+  if(subject == people.nardi)
+    return this.addAccompagnatore(sentence);
   return sentence;  
 }
 
@@ -33,6 +45,8 @@ exports.labMeetingPadulo = function() {
   var verb = "presenterà";
   var meeting_theme = utils.randomElementFromList(this.meeting_themes);
   var sentence = '"' + time + ' ' + subject + ' ' + verb + ' ' + meeting_theme + '"';
+  if(subject == people.nardi)
+    return this.addAccompagnatore(sentence);
   return sentence;  
 }
 
@@ -42,5 +56,7 @@ exports.datasetAcquisitionPadulo = function() {
   var verb = "andrà ad acquisire un dataset a";
   var dataset = utils.randomElementFromList(this.datasets);
   var sentence = '"' + time + ' ' + subject + ' ' + verb + ' ' + dataset + '"';
+  if(subject == people.nardi)
+    return this.addAccompagnatore(sentence);
   return sentence;     
 }

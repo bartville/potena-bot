@@ -27,8 +27,10 @@ this.deadlines["IROS"] = new Date("March 1, 2019 23:59:00");
 
 /* Selection of Curses */
 exports.curses = [" mamta fa l spaccat ngopp i tutr",
-                  " ti svito la testa e ci cago dentro",
-                  " t arrap la scrima c r bdent"];
+                  " ti svito la testa e ti cago nel collo",
+                  " t arrap la scrima c r bdent",
+                  " ma addo vuo i, statt alla casa",
+                  " mo t scocc n bicchier ncapa"];
 
 /*Selection of answer to Lol*/
 exports.lol = ["Cazz c rir, strunz!",

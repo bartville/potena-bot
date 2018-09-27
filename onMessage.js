@@ -21,7 +21,8 @@ exports.onMessage = function(msg, reply){
     reply.text(to_reply).then();
     return;       
   } else if (msg.text.indexOf('lol' ) > -1  || msg.text.indexOf('Lol') > -1) {
-		to_reply = utils.randomElementFromList(lists.lol);
+		//to_reply = utils.randomElementFromList(lists.lol);
+    to_reply = 'Cazz c rir, strunz!'
     reply.text(to_reply).then();
     return;      
   } else if (msg.text.indexOf('sapere' ) > -1  || msg.text.indexOf('sai') > -1) {
@@ -37,7 +38,7 @@ exports.onMessage = function(msg, reply){
     reply.text(to_reply).then();
     return;  
   } else if (msg.text.indexOf('cibo') > -1 || msg.text.indexOf('Cibo') > -1) {
-		to_reply = 'Ecc e ch Puorc!'
+		to_reply = 'neggia e che Puorc!'
     reply.text(to_reply).then();
     return;       
   } else if (msg.text.indexOf('ciro') > -1 || msg.text.indexOf('Ciro') > -1) {
@@ -52,6 +53,10 @@ exports.onMessage = function(msg, reply){
     reply.photo("http://danielevangelista.altervista.org/PotenaBotMedia/Photos/dominik.jpg", '"eho, hai rotto il cazz!"');
     return;       
 */
+    } else if (msg.text.indexOf('dove') > -1 || msg.text.indexOf('Dove') > -1) {
+		to_reply = 'p spiarn!'
+    reply.text(to_reply).then();
+    return;   
     } else if (msg.text.indexOf('insulta') > -1 || msg.text.indexOf('Insulta') > -1) { 
     var msg_splitted = msg.text.split(" ");
     var id_insulta = msg_splitted.indexOf('insulta');
@@ -65,7 +70,7 @@ exports.onMessage = function(msg, reply){
     reply.document("http://danielevangelista.altervista.org/PotenaBotMedia/Photos/iocci.gif");
     return;
   } else if (msg.text.indexOf('deadline') > -1 || msg.text.indexOf('Deadline') > -1) {
-    reply.text("Futt a mov!").then();
+    reply.text("Fut't a mov!").then();
     return;
   }
   
