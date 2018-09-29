@@ -25,7 +25,7 @@ exports.addAccompagnatore = function(sentence) {
   }
   var re_splitted = sentence.split('"');
   var extended_sentence = '"' + re_splitted[1] + " ...e " + subject + ' verrà con me!"';
-  return extended_sentence;
+  return extended_sentence.replace(people.nardi, "il sottoscritto");
 } 
 
 exports.basePadulo = function() {
