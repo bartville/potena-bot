@@ -12,11 +12,12 @@ exports.ficadelgiorno = ["http://www.rt-gcoe.waseda.ac.jp/japanese/2013/01/24/IM
                 "http://www.dis.uniroma1.it/~spqr/images/ester-latini.jpg"];
 
 exports.nardi = "http://spqr.diag.uniroma1.it/wp-content/uploads/2013/04/daniele-150x150.jpg";
+exports.roland = "http://www.asl.ethz.ch/the-lab/_jcr_content/par/textimage/image.imageformat.lightbox.676719260.jpg";
 
 exports.photo = ["https://mas-group.inf.h-brs.de/wp-content/uploads/2015/06/Daniele_Nardi-292x262.jpg",
-                 "http://spqr.diag.uniroma1.it/wp-content/uploads/2013/04/daniele-150x150.jpg",
+                 this.nardi,
                  "http://www.dis.uniroma1.it/~labrococo/pics/labrococo.jpg",
-                 "http://www.asl.ethz.ch/the-lab/_jcr_content/par/textimage/image.imageformat.lightbox.676719260.jpg"];
+                 this.roland];
 
 
 /* List of Deadlines */

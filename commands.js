@@ -34,7 +34,10 @@ exports.declare = function(potena_bot, string) {
       reply.markdown(venafrano.generateMolisan());
     }
     else if(string == "padulo"){
-      reply.photo(lists.nardi, paduli.generatePadulo());
+      if(Math.random() < 0.7)
+        reply.photo(lists.nardi, paduli.generateNardiPadulo());
+      else
+        reply.photo(lists.roland, paduli.generateRolandPadulo());
     }
     else if(string == "deadline"){
       var msg_splitted = msg.text.split(" ");
