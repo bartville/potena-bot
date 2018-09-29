@@ -34,6 +34,7 @@ commands.declare(potena_bot, "padulo");
 // returns the deadline time (in seconds) for required conference: e.g. /deadline ICRA
 commands.declare(potena_bot, "deadline");
 
+commands.declare(potena_bot, "test");
 
 // the bot answers are listed in onMessage.js
 potena_bot.text(answer.onMessage);

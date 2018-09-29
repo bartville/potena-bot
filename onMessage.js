@@ -8,7 +8,7 @@ exports.onMessage = function(msg, reply){
 		to_reply = 'Forse vulevi dire Pllashtr!'
     reply.text(to_reply).then();
     return;   
-  } else if (msg.text.indexOf('polli' || msg.text.indexOf('Polli') > -1) > -1) {
+  } else if (msg.text.indexOf('polli') > -1 || msg.text.indexOf('Polli') > -1) {
 		to_reply = 'Forse vulevi dire Pllashtr!'
     reply.text(to_reply).then();
     return;       

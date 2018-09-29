@@ -67,9 +67,13 @@ exports.datasetAcquisitionPadulo = function() {
 }
 
 exports.generateRolandPadulo = function() {
-  var subject = 'Hoo-Hoo Ciiiirooo';
+  var subject = 'ooooooh Ciiiirooo';
   var time = utils.randomElementFromList(this.times);
   var padulo = utils.randomElementFromList(this.roland_duties);
   var sentence = '"' + subject + ' ' + time + ' ' + padulo + '"';
   return sentence;
+}
+
+exports.rolandSendCiro = function() {
+  return '"ooooooh Ciiiiiroooo, vai tu al posto mio oooooh"';
 }
