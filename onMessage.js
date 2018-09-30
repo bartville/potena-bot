@@ -53,7 +53,7 @@ exports.onMessage = function(msg, reply){
     reply.photo("http://danielevangelista.altervista.org/PotenaBotMedia/Photos/dominik.jpg", '"eho, hai rotto il cazz!"');
     return;       
 */
-    } else if (msg.text.indexOf('dove') > -1 || msg.text.indexOf('Dove') > -1) {
+    } else if (msg.text.indexOf('?') > -1 && (msg.text.indexOf('dove') > -1 || msg.text.indexOf('Dove') > -1)) {
 		to_reply = 'p spiarn!'
     reply.text(to_reply).then();
     return;   
