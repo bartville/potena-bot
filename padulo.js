@@ -12,8 +12,13 @@ exports.meeting_themes = ["le normative sulla sicurezza del laboratorio",
                           "il semantic mapping", 
                           "la calibrazione automatica di tutti i sensori per la human robot interaction"];
 
+exports.roland_duties = ["devi venire a spazzolare il lama",                        
+                         "mi devi costruire un nuovo UAV per far giocare il lama",
+                         "mi devi progettare un UGV per raccogliere la cacca del lama"];
+
+
 // generates a molisan sentence as: subject + verb + preposition + object
-exports.generatePadulo = function() {
+exports.generateNardiPadulo = function() {
   var paduli = [this.basePadulo(), this.labMeetingPadulo(), this.datasetAcquisitionPadulo()];
   return utils.randomElementFromList(paduli);
 }
@@ -59,4 +64,16 @@ exports.datasetAcquisitionPadulo = function() {
   if(subject == people.nardi)
     return this.addAccompagnatore(sentence);
   return sentence;     
+}
+
+exports.generateRolandPadulo = function() {
+  var subject = 'ooooooh Ciiiirooo';
+  var time = utils.randomElementFromList(this.times);
+  var padulo = utils.randomElementFromList(this.roland_duties);
+  var sentence = '"' + subject + ' ' + time + ' ' + padulo + '"';
+  return sentence;
+}
+
+exports.rolandSendCiro = function() {
+  return '"ooooooh Ciiiiiroooo, vai tu al posto mio oooooh"';
 }

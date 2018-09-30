@@ -4,6 +4,7 @@ var venafrano = require('./molisan-vocabulary.js');     // load the vocabulary f
 var utils = require('./utils.js');                      // load base utilities to address lists
 var lists = require('./misc_lists.js');                 // load lists of photo/names/curses/stuff
 var paduli = require('./padulo.js');                    // load padulo-generator utilities
+var people = require('./persone.js');                   // load people
 
 // Declare new bot commands, i.e. the one triggered by '/'
 exports.declare = function(potena_bot, string) {
@@ -34,7 +35,16 @@ exports.declare = function(potena_bot, string) {
       reply.markdown(venafrano.generateMolisan());
     }
     else if(string == "padulo"){
-      reply.photo(lists.nardi, paduli.generatePadulo());
+      if(Math.random() < 0.7) { // 70% Nardi Padulo
+        var nardi_padulo =  paduli.generateNardiPadulo();
+        reply.photo(lists.nardi, nardi_padulo);
+        // if Nardi padula Roland, Roland sends Ciro
+        if(nardi_padulo.indexOf(people.roland) > -1) {
+          reply.photo(lists.roland, paduli.rolandSendCiro());
+        }
+      } else { // 30% Roland Padulo
+        reply.photo(lists.roland, paduli.generateRolandPadulo());
+      }
     }
     else if(string == "deadline"){
       var msg_splitted = msg.text.split(" ");
