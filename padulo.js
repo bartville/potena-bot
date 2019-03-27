@@ -10,7 +10,8 @@ exports.datasets = ["catacombe di Priscilla", "Jesi", "Ancona", "Caffarella", "E
 exports.meeting_themes = ["le normative sulla sicurezza del laboratorio", 
                           "la classificazione della peronospera per i girasoli", 
                           "il semantic mapping", 
-                          "la calibrazione automatica di tutti i sensori per la human robot interaction"];
+                          "la calibrazione automatica di tutti i sensori per la human robot interaction",
+                          "il laboratorio dopo averlo messo in ordine"];
 
 exports.roland_duties = ["devi venire a spazzolare il lama",                        
                          "mi devi costruire un nuovo UAV per far giocare il lama",

@@ -2,10 +2,10 @@ var utils = require("./utils.js");
 var people = require("./persone.js");
 
 /***** LIST OF WORDS FOR MOLISAN VOCABULARY*****/
-exports.bonus =        ["aee", "e l vi", "e gli vi" ,"essi vi", "e c la ve", "sant Ncandr", "neggia i cuazz"];
-exports.verbs =        ["spetacc", "ha squacciato", "squacc", "trzzea", "ha spresato", "ha cagato"];
+exports.bonus =        ["aee", "e l vi", "e gli vi" ,"essi vi", "e c la ve", "sant Ncandr", "neggia i cuazz", "tamiend"];
+exports.verbs =        ["ha strppiat","spetacc", "ha squacciato", "squacc", "trzzea", "ha spresato", "ha cagato"];
 exports.prepositions = ["", "ngopp", "sott", "alloc", "rent"];
-exports.objects =      ["l vscuott", "le vscuottera", "la frssor", "i pullashtr", "i spiarn"];
+exports.objects =      ["l vscuott", "le vscuottera", "la frssor", "i pullashtr", "i spiarn","i vasncola","i cauzttin"];
 
 // generates a molisan sentence as: subject + verb + preposition + object
 exports.generateMolisan = function() {
