@@ -25,6 +25,7 @@ exports.declare = function(potena_bot, string) {
       reply.text("cazz vuo', Puorc?");
     }
     else if(string == "ficadelgiorno"){
+//      reply.text("Eoh! Rott er cazz");
       reply.photo(utils.randomElementFromList(lists.ficadelgiorno));
     }
 /*    else if(string == "dominique"){
@@ -44,6 +45,7 @@ exports.declare = function(potena_bot, string) {
         }
       } else { // 30% Roland Padulo
         reply.photo(lists.roland, paduli.generateRolandPadulo());
+        reply.photo(lists.lama, "");
       }
     }
     else if(string == "deadline"){

@@ -12,6 +12,14 @@ exports.onMessage = function(msg, reply){
 		to_reply = 'Forse vulevi dire Pllashtr!'
     reply.text(to_reply).then();
     return;       
+  } else if (msg.text.indexOf('auguri') > -1 || msg.text.indexOf('Auguri') > -1) {
+		to_reply = 'a te e a mammt!'
+    reply.text(to_reply).then();
+    return; 
+  } else if (msg.text.indexOf('nome?') > -1 || msg.text.indexOf('name?') > -1 || msg.text.indexOf('Nome?') > -1 || msg.text.indexOf('Name?') > -1) {
+    to_reply = 'Mammt'
+    reply.text(to_reply).then();
+    return;
   } else if (msg.text.indexOf('tarallo') > -1  || msg.text.indexOf('Tarallo') > -1) {
 		to_reply = 'Vscuott!'
     reply.text(to_reply).then();
@@ -37,7 +45,7 @@ exports.onMessage = function(msg, reply){
 		to_reply = "E che é successo, eh?"
     reply.text(to_reply).then();
     return;  
-  } else if (msg.text.indexOf('cibo') > -1 || msg.text.indexOf('Cibo') > -1) {
+  } else if (msg.text.indexOf('cibo') > -1 || msg.text.indexOf('Cibo') > -1 || msg.text.indexOf('CfC') > -1 || msg.text.indexOf('cfc') > -1) {
 		to_reply = 'neggia e che Puorc!'
     reply.text(to_reply).then();
     return;       
@@ -45,9 +53,10 @@ exports.onMessage = function(msg, reply){
 		to_reply = 'Chair!'
     reply.text(to_reply).then();
     return;       
-  } else if (msg.text.indexOf('mannaggia') > -1 || msg.text.indexOf('mannagg') > -1) {
+  } else if (msg.text.indexOf('mannaggia') > -1 || msg.text.indexOf('Mannaggia') > -1 || msg.text.indexOf('mannagg') > -1 || msg.text.indexOf('Mannagg') > -1) {
 		to_reply = 'negg sant Ncandr!'
-    reply.text(to_reply).then();
+    reply.photo(lists.sanciro, to_reply)
+    //reply.text(to_reply).then();
     return;       
 /*  } else if (msg.text.indexOf('dominique') > -1 || msg.text.indexOf('Dominique') > -1) {
     reply.photo("http://danielevangelista.altervista.org/PotenaBotMedia/Photos/dominik.jpg", '"eho, hai rotto il cazz!"');
